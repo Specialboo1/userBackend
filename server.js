@@ -12,7 +12,11 @@ app.use(express.json());
 
 // Connect to Supabase Postgres
 const pool = new Pool({
-  connectionString: process.env.DATABASE_URL,
+  user: "postgres",
+  password: "HPRMSDewidWmSVGs",
+  host: "db.odzpmzlzguracdsqnkjs.supabase.co", // hostname, not IP
+  port: 5432,
+  database: "postgres",
   ssl: { rejectUnauthorized: false },
 });
 
